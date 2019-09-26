@@ -13,8 +13,8 @@ Oneliners everywhere
     
   - Top 10 requests por IP
   
-    ```awk -F\" '{print $1}' lesportiu_log.log | sort | uniq -c | sort -hr | head -10```
+    ```awk -F\" '{print $1}' log_file.log | sort | uniq -c | sort -hr | head -10```
     
   - Top 10 requests per User-Agent
   
-    ```awk -F\" '{print $6}' lesportiu_log.log | sort | uniq -c | sort -hr | head -10```
+    ```awk -F\" '{print $6}' log_file.log | sort | uniq -c | sort -hr | head -10```
