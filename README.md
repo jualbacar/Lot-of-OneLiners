@@ -9,4 +9,12 @@ Oneliners everywhere
 + Apache
   - Top 10 requests per IP and User-Agent
   
-    ``` hello ```
+    ```cat log_file.log | sed -e 's/^\([[:digit:]\.]*\).*"\(.*\)"$/\1 \2/' | sort -n | uniq -c | sort -hr | head -10```
+    
+  - Top 10 requests por IP
+  
+    ```awk -F\" '{print $1}' lesportiu_log.log | sort | uniq -c | sort -hr | head -10```
+    
+  - Top 10 requests per User-Agent
+  
+    ```awk -F\" '{print $6}' lesportiu_log.log | sort | uniq -c | sort -hr | head -10```
